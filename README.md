@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github repository](https://github.com/Dantedavidson/Manage-landing-page)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -59,7 +59,7 @@ Users should be able to:
 
 - Frontend Mentor - [@Dantedavidson](https://www.frontendmentor.io/profile/Dantedavidson)
 - LinkedIn - [@Dante Davidson Daniele](https://www.linkedin.com/in/dante-davidson-daniele-54a1ab213/)
-- Github - [@Dantedavidson] (https://github.com/Dantedavidson)
+- Github - [@Dantedavidson](https://github.com/Dantedavidson)
 
 ## Acknowledgments
 

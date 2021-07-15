@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Be Vietnam", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Text Styles
+
+h1 {
+  font-size: 2.625rem;
+  font-weight: 700;
+  color: $darkBlue;
+
+  @include breakpoint-up(medium) {
+    font-size: 3.0625rem;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $darkBlue;
+
+  @include breakpoint-up(medium) {
+    font-size: 2.25rem;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $darkBlue;
+}
+
+li {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $darkBlue;
+  cursor: pointer;
+
+  &:hover {
+    color: $darkGrayishBlue;
+  }
+
+  @include breakpoint-up(large) {
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $darkBlue;
+
+  @include breakpoint-up(medium) {
+    font-size: 0.9375rem;
+  }
+
+  @include breakpoint-up(large) {
+    font-size: 1rem;
+  }
+}
+
+//buttons
+
+.btn {
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  border-radius: 2rem;
+  background-color: $brightRed;
+  color: $veryLightGray;
+
+  &__cta {
+    cursor: pointer;
+    box-shadow: 0 0.3rem 0.6rem rgb(242 95 58 / 60%);
+    &:hover {
+      background-color: lighten($brightRed, 10%);
+    }
+  }
+}
+
+//Utility
+
+.hide-for-mobile {
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-tablet-down {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-tablet-up {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
