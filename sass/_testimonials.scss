@@ -1,0 +1,66 @@
+.testimonials {
+  text-align: center;
+  margin-bottom: 2.625rem;
+  padding-right: $mainPadding;
+  padding-left: $mainPadding;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 11.25rem;
+  }
+
+  &__heading {
+    margin-bottom: 6rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 6.625rem;
+    }
+  }
+
+  &__display-bar {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 2.875rem;
+  }
+
+  &__dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: $brightRed 1px solid;
+    border-radius: 15px;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 0.1875rem;
+    }
+
+    &.dot-active {
+      background-color: $brightRed;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  margin: auto;
+  padding-top: 4rem;
+  padding-right: 1.75rem;
+  padding-left: 1.75rem;
+  background-color: darken($veryLightGray, 4%);
+  max-width: 33rem;
+
+  &__profile-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 4.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    padding-bottom: 2.875rem;
+  }
+}

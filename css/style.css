@@ -72,8 +72,7 @@ li:hover {
 }
 @media (min-width: 64em) {
   li {
-    font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -115,25 +114,25 @@ p {
 
 @media (max-width: 39.9375em) {
   .hide-for-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (max-width: 63.9375em) {
   .hide-for-tablet-down {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 40em) {
   .hide-for-tablet-up {
-    display: none;
+    display: none !important;
   }
 }
 
 @media (min-width: 64em) {
   .hide-for-desktop {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -382,9 +381,73 @@ p {
 .feature__title {
   align-self: center;
 }
-.feature__text {
-  padding-right: 1.1rem;
-  padding-left: 5.9625rem;
+@media (min-width: 64em) {
+  .feature__text {
+    padding-right: 1.1rem;
+    padding-left: 5.9625rem;
+  }
+}
+
+.testimonials {
+  text-align: center;
+  margin-bottom: 2.625rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 64em) {
+  .testimonials {
+    margin-bottom: 11.25rem;
+  }
+}
+.testimonials__heading {
+  margin-bottom: 6rem;
+}
+@media (min-width: 64em) {
+  .testimonials__heading {
+    margin-bottom: 6.625rem;
+  }
+}
+.testimonials__display-bar {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 2.875rem;
+}
+.testimonials__dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: #f25f3a 1px solid;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.testimonials__dot:not(:last-child) {
+  margin-right: 0.1875rem;
+}
+.testimonials__dot.dot-active {
+  background-color: #f25f3a;
+}
+
+.card {
+  position: relative;
+  margin: auto;
+  padding-top: 4rem;
+  padding-right: 1.75rem;
+  padding-left: 1.75rem;
+  background-color: #f0f0f0;
+  max-width: 33rem;
+}
+.card__profile-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4.5rem;
+}
+.card__heading {
+  margin-bottom: 2rem;
+}
+.card__text {
+  padding-bottom: 2.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

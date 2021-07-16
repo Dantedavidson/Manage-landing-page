@@ -69,8 +69,7 @@ li {
   }
 
   @include breakpoint-up(large) {
-    font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -120,24 +119,24 @@ p {
 
 .hide-for-mobile {
   @include breakpoint-down(small) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-for-tablet-down {
   @include breakpoint-down(medium) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-for-tablet-up {
   @include breakpoint-up(medium) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-for-desktop {
   @include breakpoint-up(large) {
-    display: none;
+    display: none !important;
   }
 }

@@ -65,7 +65,9 @@
   }
 
   &__text {
-    padding-right: 1.1rem;
-    padding-left: 5.9625rem;
+    @include breakpoint-up(large) {
+      padding-right: 1.1rem;
+      padding-left: 5.9625rem;
+    }
   }
 }
