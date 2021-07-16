@@ -1,0 +1,71 @@
+.features {
+  margin-bottom: 4.75rem;
+  @include breakpoint-up(large) {
+    margin-bottom: 9.75rem;
+    padding-right: $mainPaddingLg;
+    padding-left: $mainPaddingLg;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 9.125rem;
+  }
+  &__lead {
+    padding-right: $mainPadding;
+    padding-left: $mainPadding;
+    text-align: center;
+    @include breakpoint-up(large) {
+      padding: 0;
+      text-align: left;
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    @include breakpoint-up(large) {
+      width: 70%;
+    }
+  }
+}
+
+.feature {
+  padding-left: 1rem;
+
+  @include breakpoint-up(large) {
+    padding: 0;
+  }
+
+  &__heading {
+    margin-bottom: 1.125rem;
+    display: flex;
+    background-color: lighten($brightRed, 36%);
+    border-radius: 2rem 0 0 2rem;
+
+    @include breakpoint-up(large) {
+      background-color: transparent;
+    }
+  }
+
+  &__btn {
+    margin-right: 1rem;
+    padding-top: 0.75rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0.875rem;
+    padding-left: 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+
+    @include breakpoint-up(large) {
+      margin-right: 1.65rem;
+    }
+  }
+
+  &__title {
+    align-self: center;
+  }
+
+  &__text {
+    padding-right: 1.1rem;
+    padding-left: 5.9625rem;
+  }
+}

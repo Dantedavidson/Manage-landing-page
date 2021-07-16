@@ -23,6 +23,9 @@
   }
 
   &__title {
+    @include breakpoint-up(large) {
+      padding-top: 3.5rem;
+    }
   }
 
   &__text {
