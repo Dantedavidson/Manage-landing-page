@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $veryLightGray;
+}
+
 ul {
   list-style: none;
 }
@@ -16,8 +20,10 @@ a {
 // Text Styles
 
 h1 {
-  font-size: 2.625rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  line-height: 1.2;
   color: $darkBlue;
 
   @include breakpoint-up(medium) {
@@ -25,6 +31,7 @@ h1 {
   }
 
   @include breakpoint-up(large) {
+    margin-bottom: 2.25rem;
     font-size: 3.5rem;
   }
 }
@@ -67,16 +74,18 @@ li {
 }
 
 p {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: $darkBlue;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  //font-size: 0.875rem;
+  font-weight: 400;
+  color: $darkGrayishBlue;
 
-  @include breakpoint-up(medium) {
-    font-size: 0.9375rem;
-  }
+  // @include breakpoint-up(medium) {
+  //   font-size: 0.9375rem;
+  // }
 
   @include breakpoint-up(large) {
-    font-size: 1rem;
+    margin-bottom: 2.625rem;
   }
 }
 
@@ -94,7 +103,7 @@ p {
 
   &__cta {
     cursor: pointer;
-    box-shadow: 0 0.3rem 0.6rem rgb(242 95 58 / 60%);
+    box-shadow: 0 0.3rem 0.6rem rgba($brightRed, 0.6);
     &:hover {
       background-color: lighten($brightRed, 10%);
     }
@@ -102,6 +111,10 @@ p {
 }
 
 //Utility
+
+.no-scroll {
+  overflow: hidden;
+}
 
 .hide-for-mobile {
   @include breakpoint-down(small) {

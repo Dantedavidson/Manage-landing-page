@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const hamburgerBtn = document.querySelector(".header__hamburger");
 const toggleBg = document.querySelector(".header__toggle-bg");
 const toggleNav = document.querySelector(".header__toggle-box");
@@ -7,6 +8,8 @@ hamburgerBtn.addEventListener("click", () => {
   if (hamburgerBtn.classList.contains("header__hamburger--active")) {
     hamburgerBtn.classList.remove("header__hamburger--active");
 
+    body.classList.remove("no-scroll");
+
     toggleBg.classList.remove("fade-in");
     toggleBg.classList.add("fade-out");
 
@@ -14,6 +17,8 @@ hamburgerBtn.addEventListener("click", () => {
     toggleNav.classList.add("fade-out");
   } else {
     hamburgerBtn.classList.add("header__hamburger--active");
+
+    body.classList.add("no-scroll");
 
     toggleBg.classList.remove("fade-out");
     toggleBg.classList.add("fade-in");

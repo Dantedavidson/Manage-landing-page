@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 ul {
   list-style: none;
 }
@@ -15,8 +19,10 @@ a {
 }
 
 h1 {
-  font-size: 2.625rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  line-height: 1.2;
   color: #242d52;
 }
 @media (min-width: 40em) {
@@ -26,6 +32,7 @@ h1 {
 }
 @media (min-width: 64em) {
   h1 {
+    margin-bottom: 2.25rem;
     font-size: 3.5rem;
   }
 }
@@ -70,18 +77,14 @@ li:hover {
 }
 
 p {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #242d52;
-}
-@media (min-width: 40em) {
-  p {
-    font-size: 0.9375rem;
-  }
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9095a7;
 }
 @media (min-width: 64em) {
   p {
-    font-size: 1rem;
+    margin-bottom: 2.625rem;
   }
 }
 
@@ -101,6 +104,10 @@ p {
 }
 .btn__cta:hover {
   background-color: #f6866a;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @media (max-width: 39.9375em) {
@@ -167,6 +174,9 @@ p {
   animation: fade-out 300ms ease-in-out forwards;
 }
 
+.header {
+  margin-bottom: 2.25rem;
+}
 .header__nav {
   position: relative;
   padding-top: 2.625rem;
@@ -219,7 +229,7 @@ p {
   margin-right: 2rem;
 }
 .header__toggle-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   background: #2b2a2f;
   background: linear-gradient(0deg, rgba(43, 42, 47, 0.9528186275) 0%, rgba(255, 255, 255, 0.0424544818) 100%);
@@ -240,6 +250,62 @@ p {
 }
 .header__toggle-links li:not(:last-child) {
   margin-bottom: 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 6.375rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 6.75rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+.hero__content {
+  grid-row: 2/2;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__content {
+    grid-row: 1/1;
+    text-align: left;
+  }
+}
+.hero__text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    margin-left: 0;
+    margin-right: 0;
+    width: 60%;
+  }
+}
+.hero__image-container {
+  grid-row: 1/1;
+  justify-self: center;
+}
+@media (min-width: 64em) {
+  .hero__image-container {
+    justify-self: end;
+  }
+}
+.hero__image {
+  width: 100%;
+  margin: auto;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    transform: translateX(1rem);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
