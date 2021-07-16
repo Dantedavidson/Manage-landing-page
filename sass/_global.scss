@@ -101,12 +101,23 @@ p {
   border-radius: 2rem;
   background-color: $brightRed;
   color: $veryLightGray;
+  font-weight: 700;
 
   &__cta {
     cursor: pointer;
     box-shadow: 0 0.3rem 0.6rem rgba($brightRed, 0.6);
     &:hover {
       background-color: lighten($brightRed, 10%);
+    }
+
+    &--contrast {
+      background-color: $veryLightGray;
+      color: $brightRed;
+      box-shadow: 0 1rem 3rem rgba(black, 0.175);
+      &:hover {
+        background-color: $veryLightGray;
+        color: lighten($brightRed, 20%);
+      }
     }
   }
 }

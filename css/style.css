@@ -99,6 +99,7 @@ p {
   border-radius: 2rem;
   background-color: #f25f3a;
   color: #fafafa;
+  font-weight: 700;
 }
 .btn__cta {
   cursor: pointer;
@@ -106,6 +107,15 @@ p {
 }
 .btn__cta:hover {
   background-color: #f6866a;
+}
+.btn__cta--contrast {
+  background-color: #fafafa;
+  color: #f25f3a;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+.btn__cta--contrast:hover {
+  background-color: #fafafa;
+  color: #f9ad9a;
 }
 
 .no-scroll {
@@ -448,6 +458,47 @@ p {
 }
 .card__text {
   padding-bottom: 2.875rem;
+}
+
+.banner {
+  padding-top: 6.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 5.5rem;
+  padding-left: 1.5rem;
+  background-color: #f25f3a;
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+.banner__heading {
+  margin-bottom: 1.625rem;
+  color: #fafafa;
+}
+@media (min-width: 40em) {
+  .banner__heading {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .banner__heading {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+.banner .btn {
+  margin-bottom: 5.625rem;
+  margin-bottom: 0;
+}
+@media (min-width: 64em) {
+  .banner .btn {
+    align-self: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+.banner {
+  padding-top: 6.375rem;
+  padding-right: $mainPadding;
+  padding-bottom: 5.5rem;
+  padding-left: $mainPadding;
+  background-color: $brightRed;
+  text-align: center;
+
+  @include breakpoint-up(large) {
+    display: flex;
+    justify-content: space-between;
+    padding-right: $mainPaddingLg;
+    padding-left: $mainPaddingLg;
+  }
+
+  &__heading {
+    margin-bottom: 1.625rem;
+    color: $veryLightGray;
+
+    @include breakpoint-up(medium) {
+      font-size: 2.5rem;
+    }
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  .btn {
+    margin-bottom: 5.625rem;
+    margin-bottom: 0;
+    @include breakpoint-up(large) {
+      align-self: center;
+    }
+  }
+}
