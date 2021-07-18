@@ -1,0 +1,147 @@
+.footer {
+  padding-top: 3.125rem;
+  padding-right: $mainPadding;
+  padding-bottom: 1.875rem;
+  padding-left: $mainPadding;
+  background-color: $veryDarkBlue;
+
+  @include breakpoint-up(large) {
+    padding-top: 3.125rem;
+    padding-right: $mainPaddingLg;
+    padding-bottom: 1.875rem;
+    padding-left: $mainPaddingLg;
+  }
+
+  &__container {
+    max-width: 25rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include breakpoint-up(large) {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 4.2rem 4.4rem;
+      grid-template-areas: "logo links links form form" "social links links copy copy";
+    }
+  }
+
+  &__form {
+    margin-bottom: 3.875rem;
+    display: flex;
+    max-width: 25.25rem;
+
+    @include breakpoint-up(large) {
+      grid-area: form;
+    }
+  }
+
+  &__links {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3.25rem;
+    padding-right: 1.25rem;
+    padding-left: 2.5rem;
+
+    @include breakpoint-up(large) {
+    }
+    li {
+      color: $veryLightGray;
+      font-size: 0.75rem;
+      font-weight: 400;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__social {
+    grid-area: social;
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+    width: 18.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3.25rem;
+    color: $veryLightGray;
+    font-size: 2rem;
+
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+    display: block;
+    height: 1.75rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3.25rem;
+
+    @include breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+
+  &__copyright {
+    grid-area: copy;
+    align-self: end;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.form {
+  &__input {
+    flex-grow: 1;
+    padding-right: 0.625rem;
+
+    input {
+      height: 3.4375rem;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      border-radius: 2rem;
+      border: none;
+      font-size: 1rem;
+    }
+  }
+
+  &__error {
+    display: none;
+    padding-top: 0.375rem;
+    padding-left: 1rem;
+    font-size: 0.625rem;
+    font-weight: 400;
+    color: $brightRed;
+  }
+
+  .btn {
+    height: 3.4375rem;
+  }
+}
+
+.form.error {
+  input {
+    border: 1px solid $brightRed;
+    color: $brightRed;
+  }
+
+  .form__error {
+    display: block;
+  }
+}
+
+.links {
+  &__container {
+    @include breakpoint-up(large) {
+      padding-left: 2rem;
+    }
+  }
+}
