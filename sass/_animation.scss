@@ -38,3 +38,67 @@
 .fade-out {
   animation: fade-out 300ms ease-in-out forwards;
 }
+
+@keyframes exit-left {
+  from {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  99% {
+  }
+  to {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+.exit-left {
+  animation: exit-left 600ms ease-in-out forwards;
+}
+
+@keyframes enter-left {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+.enter-left {
+  animation: enter-left 600ms ease-in-out forwards;
+}
+
+@keyframes exit-right {
+  from {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  99% {
+  }
+  to {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.exit-right {
+  animation: exit-right 600ms ease-in-out forwards;
+}
+
+@keyframes enter-right {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+.enter-right {
+  animation: enter-right 600ms ease-in-out forwards;
+}

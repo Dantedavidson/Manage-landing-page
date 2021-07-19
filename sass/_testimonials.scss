@@ -1,10 +1,16 @@
 .testimonials {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
   text-align: center;
+  position: relative;
   margin-bottom: 2.625rem;
   padding-right: $mainPadding;
   padding-left: $mainPadding;
+  height: 35.25rem;
 
   @include breakpoint-up(large) {
+    //height: auto;
     margin-bottom: 11.25rem;
   }
 
@@ -16,10 +22,21 @@
     }
   }
 
+  &__cards {
+    position: relative;
+  }
+
+  &__btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__display-bar {
     justify-content: center;
     display: flex;
-    margin-bottom: 2.875rem;
+    margin-bottom: 2rem;
   }
 
   &__dot {
@@ -33,20 +50,29 @@
       margin-right: 0.1875rem;
     }
 
-    &.dot-active {
+    &.dot--active {
       background-color: $brightRed;
     }
   }
 }
 
 .card {
-  position: relative;
+  position: absolute;
   margin: auto;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
   padding-top: 4rem;
   padding-right: 1.75rem;
   padding-left: 1.75rem;
   background-color: darken($veryLightGray, 4%);
+  min-width: 20.625rem;
   max-width: 33rem;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   &__profile-img {
     position: absolute;

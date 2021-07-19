@@ -191,6 +191,62 @@ p {
   animation: fade-out 300ms ease-in-out forwards;
 }
 
+@keyframes exit-left {
+  from {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+.exit-left {
+  animation: exit-left 600ms ease-in-out forwards;
+}
+
+@keyframes enter-left {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+.enter-left {
+  animation: enter-left 600ms ease-in-out forwards;
+}
+
+@keyframes exit-right {
+  from {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+.exit-right {
+  animation: exit-right 600ms ease-in-out forwards;
+}
+
+@keyframes enter-right {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+.enter-right {
+  animation: enter-right 600ms ease-in-out forwards;
+}
+
 .header {
   margin-bottom: 2.25rem;
 }
@@ -416,9 +472,11 @@ p {
 
 .testimonials {
   text-align: center;
+  position: relative;
   margin-bottom: 2.625rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  height: 35.25rem;
 }
 @media (min-width: 64em) {
   .testimonials {
@@ -433,10 +491,19 @@ p {
     margin-bottom: 6.625rem;
   }
 }
+.testimonials__cards {
+  position: relative;
+}
+.testimonials__btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .testimonials__display-bar {
   justify-content: center;
   display: flex;
-  margin-bottom: 2.875rem;
+  margin-bottom: 2rem;
 }
 .testimonials__dot {
   display: block;
@@ -449,18 +516,26 @@ p {
 .testimonials__dot:not(:last-child) {
   margin-right: 0.1875rem;
 }
-.testimonials__dot.dot-active {
+.testimonials__dot.dot--active {
   background-color: #f25f3a;
 }
 
 .card {
-  position: relative;
+  position: absolute;
   margin: auto;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
   padding-top: 4rem;
   padding-right: 1.75rem;
   padding-left: 1.75rem;
   background-color: #f0f0f0;
+  min-width: 20.625rem;
   max-width: 33rem;
+}
+.card--active {
+  visibility: visible;
+  opacity: 1;
 }
 .card__profile-img {
   position: absolute;
