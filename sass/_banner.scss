@@ -6,11 +6,19 @@
   background-color: $brightRed;
   text-align: center;
 
+  background-image: url("../images/bg-simplify-section-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center left;
+
   @include breakpoint-up(large) {
     display: flex;
     justify-content: space-between;
     padding-right: $mainPaddingLg;
     padding-left: $mainPaddingLg;
+
+    background-image: url("../images/bg-simplify-section-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
   }
 
   &__heading {

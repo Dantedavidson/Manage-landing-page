@@ -1,11 +1,22 @@
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 6.375rem;
+  padding-bottom: 6.375rem;
   padding-right: $mainPadding;
   padding-left: $mainPadding;
 
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 260% 90%;
+  background-size: 75%;
+
+  @include breakpoint-up(medium) {
+    background-position: 130% 99%;
+    background-size: 40%;
+  }
+
   @include breakpoint-up(large) {
+    background-image: none;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 6.75rem;
     padding-right: $mainPaddingLg;

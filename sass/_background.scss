@@ -1,0 +1,24 @@
+.background-wrapper {
+  background-image: url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 200% -15%;
+  background-size: 90%;
+
+  @include breakpoint-up(medium) {
+    background-position: 188% -30%;
+    background-size: 80%;
+  }
+
+  @include breakpoint-up(large) {
+    background-position: 106% -130%;
+    background-size: 47%;
+  }
+}
+
+.btm-bg-wrapper {
+  @include breakpoint-up(large) {
+    background-image: url("../images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: -60% 60%;
+  }
+}
