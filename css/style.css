@@ -247,6 +247,18 @@ p {
   animation: enter-right 600ms ease-in-out forwards;
 }
 
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-150vw);
+  }
+}
+.loop {
+  animation: loop 10000ms ease-in forwards;
+}
+
 .header {
   margin-bottom: 2.25rem;
 }
@@ -480,6 +492,7 @@ p {
 }
 @media (min-width: 64em) {
   .testimonials {
+    padding: 0;
     margin-bottom: 11.25rem;
   }
 }
@@ -494,11 +507,23 @@ p {
 .testimonials__cards {
   position: relative;
 }
+@media (min-width: 64em) {
+  .testimonials__cards {
+    display: flex;
+  }
+}
 .testimonials__btn-container {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (min-width: 64em) {
+  .testimonials__btn-container {
+    position: relative;
+    left: unset;
+    transform: unset;
+  }
 }
 .testimonials__display-bar {
   justify-content: center;
@@ -532,6 +557,17 @@ p {
   background-color: #f0f0f0;
   min-width: 20.625rem;
   max-width: 33rem;
+  overflow: visible;
+}
+@media (min-width: 64em) {
+  .card {
+    flex-shrink: 0;
+    position: relative;
+    left: unset;
+    margin-right: 2rem;
+    opacity: 1;
+    transform: none;
+  }
 }
 .card--active {
   visibility: visible;
@@ -549,6 +585,15 @@ p {
 }
 .card__text {
   padding-bottom: 2.875rem;
+}
+
+@media (min-width: 64em) {
+  .desktop-flex-wrapper {
+    height: 20.8rem;
+    padding-top: 2.5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
 }
 
 .banner {

@@ -10,7 +10,7 @@
   height: 35.25rem;
 
   @include breakpoint-up(large) {
-    //height: auto;
+    padding: 0;
     margin-bottom: 11.25rem;
   }
 
@@ -24,6 +24,10 @@
 
   &__cards {
     position: relative;
+
+    @include breakpoint-up(large) {
+      display: flex;
+    }
   }
 
   &__btn-container {
@@ -31,6 +35,11 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    @include breakpoint-up(large) {
+      position: relative;
+      left: unset;
+      transform: unset;
+    }
   }
 
   &__display-bar {
@@ -68,6 +77,16 @@
   background-color: darken($veryLightGray, 4%);
   min-width: 20.625rem;
   max-width: 33rem;
+  overflow: visible;
+
+  @include breakpoint-up(large) {
+    flex-shrink: 0;
+    position: relative;
+    left: unset;
+    margin-right: 2rem;
+    opacity: 1;
+    transform: none;
+  }
 
   &--active {
     visibility: visible;
@@ -88,5 +107,14 @@
 
   &__text {
     padding-bottom: 2.875rem;
+  }
+}
+
+.desktop-flex-wrapper {
+  @include breakpoint-up(large) {
+    height: 20.8rem;
+    padding-top: 2.5rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
   }
 }

@@ -35,7 +35,7 @@ let mobileTogle = Array.from(
 class Testimonials {
   constructor(cards, selector) {
     this.active = 0;
-    this.screenSize = screen.width;
+
     this.cards = cards;
     this.selector = selector;
   }
@@ -79,6 +79,9 @@ class Testimonials {
 
   //card change
   handleToggleClick(id) {
+    //disable if active
+    if (id === this.active) return;
+
     if (id > this.active) {
       // //set target to enter right. set active to exit left
       this.enterRight(this.cards[id]);
@@ -88,11 +91,14 @@ class Testimonials {
       this.enterLeft(this.cards[id]);
       this.exitRight(this.cards[this.active]);
     }
-    this.active = parseInt(id);
+    this.active = id;
     this.selector.forEach((span, index) => this.setActiveBubble(span, index));
   }
 
   handleInterval() {
+    //only active on screens below 1024px
+    if (window.innerWidth >= 1024) return;
+    console.log(window.innerWidth);
     let current = this.active;
     this.active = this.active >= 3 ? 0 : this.active + 1;
 
@@ -122,7 +128,7 @@ testimonialController.setActiveCard();
 
 mobileTogle.forEach((toggler) => {
   toggler.addEventListener("click", () => {
-    testimonialController.handleToggleClick(toggler.id);
+    testimonialController.handleToggleClick(parseInt(toggler.id));
   });
 });
 

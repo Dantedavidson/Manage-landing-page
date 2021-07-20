@@ -102,3 +102,17 @@
 .enter-right {
   animation: enter-right 600ms ease-in-out forwards;
 }
+
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-150vw);
+  }
+}
+
+.loop {
+  animation: loop 10000ms ease-in forwards;
+}
