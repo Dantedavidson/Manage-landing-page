@@ -116,3 +116,12 @@
 .loop {
   animation: loop 10000ms ease-in forwards;
 }
+
+// @keyframes scroll {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(calc(-25rem * 2.5));
+//   }
+// }
