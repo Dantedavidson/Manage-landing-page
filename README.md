@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository](https://github.com/Dantedavidson/Manage-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://dantedavidson.github.io/Manage-landing-page/)
 
 ## My process
 
