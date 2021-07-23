@@ -256,9 +256,17 @@ p {
   }
 }
 .loop {
-  animation: loop 10000ms ease-in forwards;
+  animation: loop 40s ease-in forwards;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-35rem * 4));
+  }
+}
 .header {
   margin-bottom: 2.25rem;
 }
@@ -506,8 +514,8 @@ p {
 }
 @media (min-width: 75em) {
   .testimonials__cards {
-    animation: scroll 10000ms linear infinite;
-    width: calc(25rem * 5);
+    animation: scroll 50000ms linear infinite;
+    width: calc(35rem * 8);
     display: flex;
   }
 }
@@ -560,9 +568,10 @@ p {
 }
 @media (min-width: 75em) {
   .card {
+    width: 33rem;
     position: relative;
     left: unset;
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
     opacity: 1;
     transform: none;
   }
@@ -585,14 +594,12 @@ p {
   padding-bottom: 2.875rem;
 }
 
-.move-left {
-  transform: translateX(-33rem);
-}
-
 @media (min-width: 75em) {
   .desktop-flex-wrapper {
     height: 20.8rem;
     padding-top: 2.5rem;
+    width: 75rem;
+    margin: auto;
     overflow: hidden;
     margin-bottom: 2rem;
   }

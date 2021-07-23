@@ -123,63 +123,14 @@ class Testimonials {
     this.selector[this.active].classList.add("dot--active");
   }
 
-  //Desktop
-
-  isOnScreen(element) {
-    let distance = element.getBoundingClientRect();
-    return (
-      distance.top >= 0 &&
-      distance.left >= 0 &&
-      distance.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      distance.right <=
-        (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
   updateContainer(element) {
     let temp = element.cloneNode(true);
     element.parentNode.appendChild(temp);
     element.remove();
   }
-
-  animateLoop(container) {
-    Array.from(container.children).forEach((child) => {
-      child.addEventListener("animationend", function animationEnd() {
-        console.log("i went off");
-        child.classList.remove("move-left");
-        // child.classList.removeEventListener("animationend", animationEnd);
-      });
-      child.classList.add("move-left");
-    });
-    //   elements.forEach((element) => {
-    //     element.classList.add("move-left");
-    //   });
-    //   let temp = this;
-    //   console.log(this);
-    //   setTimeout(function () {
-    //     console.log(temp);
-    //     console.log("i went off");
-    //     console.log(elements[0]);
-    //     temp.updateContainer(elements[0]);
-    //     elements.forEach((element) => {
-    //       console.log(element);
-    //     });
-    //   }, 4800);
-    // }
-  }
 }
 
 let testimonialController = new Testimonials(cards, mobileTogle);
-
-let test = document.querySelector("#test");
-
-test.addEventListener("click", () => {
-  cards.forEach((card) => {
-    card.classList.toggle("move-left");
-  });
-});
-// testimonialController.animateLoop(container);
 
 testimonialController.setActiveCard();
 
@@ -192,88 +143,3 @@ mobileTogle.forEach((toggler) => {
 window.setInterval(() => {
   testimonialController.handleInterval();
 }, 15000);
-
-testimonialController.auto();
-
-// initCards(cards) {
-//   //check how many elements in cards array
-//   let maxItems = cards.length;
-//   //initialize new container
-//   let emptyContainer;
-
-//   if (this.initialContainer.length === 0) {
-//     this.initialContainer.push([maxItems - 1, true]);
-//     emptyContainer = true;
-//   }
-
-//   for (let i = 0; i < maxItems; i++) {
-//     this.initialContainer.push([i, false]);
-//   }
-
-//   this.addCard(this.initialContainer, emptyContainer, cards);
-// }
-
-// addCard(initialCards, isEmpty = true, cards) {
-//   for (let i = 0; i < initialCards.length - 1; i++) {
-//     let newChild = cards[i].cloneNode(true);
-
-//     if (initialCards[i][1]) {
-//       cards[0].parentNode.insertBefore(
-//         cards[cards.length - 1].cloneNode(true),
-//         cards[0]
-//       );
-//     }
-
-//     if (isEmpty) {
-//       isEmpty = false;
-//       return;
-//     } else if (!initialCards[i][1]) cards[0].parentNode.appendChild(newChild);
-//   }
-// }
-
-// moveCards(elements) {
-//   for (let i = 0; i < elements.length; i++) {
-//     console.log(elements[i]);
-//     elements[i].classList.toggle("move-left");
-//   }
-// }
-
-// arrangeCards(elements) {
-//   console.log("zero", elements[0]);
-//   elements[0].parentNode.appendChild(elements[1].cloneNode(true));
-//   elements[0].parentNode.removeChild(elements[0]);
-// }
-
-// switchCards(elements) {
-//   this.arrangeCards(elements);
-//   this.moveCards(elements);
-// }
-
-// wait(ms = 0) {
-//   return new Promise((resolve) => {
-//     setTimeout(resolve, ms);
-//   });
-// }
-
-// async go(cards, timeWaiting) {
-//   await this.wait(timeWaiting / 2);
-//   this.moveCards(cards);
-//   await this.wait(timeWaiting);
-//   this.switchCards(cards);
-//   await this.wait(timeWaiting / 2);
-// }
-
-// auto() {
-//   this.initCards(this.cards);
-//   let temp = this;
-//   setTimeout(
-//     function carousel(cards) {
-//       temp.go(cards, temp.delay * 0.9);
-
-//       setTimeout(carousel, temp.delay, temp.cards, temp.delay);
-//     },
-//     1000,
-//     temp.cards,
-//     temp.delay
-//   );
-// }

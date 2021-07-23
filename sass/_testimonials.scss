@@ -26,8 +26,8 @@
     //position: relative;
 
     @include breakpoint-up(large) {
-      animation: scroll 10000ms linear infinite;
-      width: calc(25rem * 5);
+      animation: scroll 50000ms linear infinite;
+      width: calc(35rem * 8);
       display: flex;
     }
   }
@@ -83,10 +83,10 @@
   overflow: visible;
 
   @include breakpoint-up(large) {
-    // flex-shrink: 0;
+    width: 33rem;
     position: relative;
     left: unset;
-    margin-right: 2rem;
+    margin: 0 2rem 0 0;
     opacity: 1;
     transform: none;
   }
@@ -113,14 +113,13 @@
   }
 }
 
-.move-left {
-  transform: translateX(-33rem);
-}
-
 .desktop-flex-wrapper {
   @include breakpoint-up(large) {
     height: 20.8rem;
     padding-top: 2.5rem;
+
+    width: 75rem;
+    margin: auto;
     overflow: hidden;
     margin-bottom: 2rem;
   }
