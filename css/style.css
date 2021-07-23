@@ -598,11 +598,26 @@ p {
   .desktop-flex-wrapper {
     height: 20.8rem;
     padding-top: 2.5rem;
-    width: 75rem;
+    position: relative;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     margin-bottom: 2rem;
   }
+}
+.desktop-flex-wrapper:before, .desktop-flex-wrapper:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 3rem;
+  background-image: linear-gradient(to right, #fafafa, rgba(250, 250, 250, 0));
+  z-index: 3;
+}
+.desktop-flex-wrapper:after {
+  right: 0;
+  background-image: linear-gradient(to right, rgba(250, 250, 250, 0), #fafafa);
 }
 
 .banner {
