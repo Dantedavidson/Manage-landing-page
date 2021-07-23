@@ -27,6 +27,30 @@ hamburgerBtn.addEventListener("click", () => {
   }
 });
 
+const form = document.querySelector(".footer__form");
+const submitBtn = document.querySelector(".footer__form .btn");
+const input = document.querySelector(".form__input input");
+
+function validate(email) {
+  const format =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  return email.match(format);
+}
+
+submitBtn.addEventListener("click", () => {
+  if (!input.value || !validate(input.value)) {
+    form.classList.remove("success");
+    form.classList.add("error");
+  } else {
+    form.classList.remove("error");
+    form.classList.add("success");
+    input.value = "";
+    setTimeout(() => {
+      form.classList.remove("success");
+    }, 3000);
+  }
+});
+
 let container = document.querySelector(".testimonials__cards");
 let cards = Array.from(document.querySelectorAll(".testimonials__cards .card"));
 let mobileTogle = Array.from(

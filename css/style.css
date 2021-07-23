@@ -774,16 +774,29 @@ p {
   border: none;
   font-size: 1rem;
 }
-.form__error {
+.form__error, .form__success {
   display: none;
   padding-top: 0.375rem;
   padding-left: 1rem;
   font-size: 0.625rem;
   font-weight: 400;
+}
+.form__error {
   color: #f25f3a;
+}
+.form__success {
+  color: green;
 }
 .form .btn {
   height: 3.4375rem;
+}
+
+.form.success input {
+  border: 1px solid green;
+  color: green;
+}
+.form.success .form__success {
+  display: block;
 }
 
 .form.error input {

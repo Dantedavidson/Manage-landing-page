@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./images/screenshot.jpg)
 
 ### Links
 
@@ -51,7 +51,21 @@ Users should be able to:
 
 ### What I learned
 
+This was a fun challenge that put my frontend skills to the test.
+
+This was a good project to work on my responsive web design skills and I was able to practice both css Grid and flexbox.
+
+I have been enjoying using the BEM method for organising my style sheets.
+
+The mobile animations + javascript for the navbar and testimonial sections, were fairly straightforward but it took me a while to find a desktop animation for the testimonials that I was happy with.
+
 ### Continued development
+
+I would need to spend more time working on animation.
+
+I would also want to spend more time with BEM as I ran into a problem where It was annoying to overwrite my global styles. I will be sure to follow BEM more closely in future projects.
+
+Also while it is not as big an issue on small hobby projects I would like to clean up my javascript code.
 
 ### Useful resources
 
